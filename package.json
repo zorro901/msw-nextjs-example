@@ -6,18 +6,21 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "bunx biome check --apply-unsafe --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true ."
+    "lint": "bunx biome check --apply-unsafe --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true .",
+    "test:e2e": "NEXT_FONT_GOOGLE_MOCKED_RESPONSES=$(pwd)/testing/mock/mocked-google-fonts.js playwright test"
   },
   "dependencies": {
+    "next": "14.2.1",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.0",
+    "@playwright/test": "^1.43.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "msw": "^2.2.14",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
