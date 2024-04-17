@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "bunx biome check --apply-unsafe --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true ."
   },
   "dependencies": {
     "react": "^18",
