@@ -16,6 +16,11 @@ e2eTest.use({
     http.get('https://jsonplaceholder.typicode.com/todos/3', () => {
       return HttpResponse.json({ id: 'this is server actions component' })
     }),
+    http.get('http://localhost:3000/api/handlers', () => {
+      return HttpResponse.json({
+        id: 'this is server route handlers component',
+      })
+    }),
   ],
 })
 
@@ -26,5 +31,8 @@ e2eTest('client and server components render', async ({ page }) => {
   await expect(page.locator('body')).toContainText('this is server component')
   await expect(page.locator('body')).toContainText(
     'this is server actions component',
+  )
+  await expect(page.locator('body')).toContainText(
+    'this is server route handlers component',
   )
 })

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "bunx biome check --apply-unsafe --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true .",
-    "test:e2e": "NEXT_FONT_GOOGLE_MOCKED_RESPONSES=$(pwd)/testing/mock/mocked-google-fonts.js playwright test"
+    "test": "NEXT_FONT_GOOGLE_MOCKED_RESPONSES=$(pwd)/testing/mock/mocked-google-fonts.js playwright test"
   },
   "dependencies": {
     "next": "14.2.1",
