@@ -10,13 +10,17 @@
     "test": "NEXT_FONT_GOOGLE_MOCKED_RESPONSES=$(pwd)/testing/mock/mocked-google-fonts.js playwright test"
   },
   "dependencies": {
+    "@mswjs/http-middleware": "^0.10.0",
+    "express": "^4.19.2",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.0",
+    "@playwright/experimental-ct-react": "^1.43.1",
     "@playwright/test": "^1.43.1",
+    "@types/express": "^4.17.21",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -24,5 +28,10 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
